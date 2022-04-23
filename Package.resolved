@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-compute-runtime",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AndrewBarba/swift-compute-runtime",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8c84156b144fc44ce758ea7745f9d0c902520904"
+      }
+    }
+  ],
+  "version" : 2
+}
