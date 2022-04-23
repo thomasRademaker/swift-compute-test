@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "starter-kit",
+    name: "rademaker",
     platforms: [
         .macOS(.v10_15)
     ],

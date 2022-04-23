@@ -40,37 +40,55 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug Hello",
-      "program": "${workspaceFolder:starter-kit}/.build/debug/Hello",
+      "program": "${workspaceFolder:swift-compute-test}/.build/debug/Hello",
       "args": [],
-      "cwd": "${workspaceFolder:starter-kit}",
+      "cwd": "${workspaceFolder:swift-compute-test}",
       "preLaunchTask": "swift: Build Debug Hello"
     },
     {
       "type": "lldb",
       "request": "launch",
       "name": "Release Hello",
-      "program": "${workspaceFolder:starter-kit}/.build/release/Hello",
+      "program": "${workspaceFolder:swift-compute-test}/.build/release/Hello",
       "args": [],
-      "cwd": "${workspaceFolder:starter-kit}",
+      "cwd": "${workspaceFolder:swift-compute-test}",
       "preLaunchTask": "swift: Build Release Hello"
     },
     {
       "type": "lldb",
       "request": "launch",
       "name": "Debug Proxy",
-      "program": "${workspaceFolder:starter-kit}/.build/debug/Proxy",
+      "program": "${workspaceFolder:swift-compute-test}/.build/debug/Proxy",
       "args": [],
-      "cwd": "${workspaceFolder:starter-kit}",
+      "cwd": "${workspaceFolder:swift-compute-test}",
       "preLaunchTask": "swift: Build Debug Proxy"
     },
     {
       "type": "lldb",
       "request": "launch",
       "name": "Release Proxy",
-      "program": "${workspaceFolder:starter-kit}/.build/release/Proxy",
+      "program": "${workspaceFolder:swift-compute-test}/.build/release/Proxy",
       "args": [],
-      "cwd": "${workspaceFolder:starter-kit}",
+      "cwd": "${workspaceFolder:swift-compute-test}",
       "preLaunchTask": "swift: Build Release Proxy"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug Rest",
+      "program": "${workspaceFolder:swift-compute-test}/.build/debug/Rest",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-compute-test}",
+      "preLaunchTask": "swift: Build Debug Rest"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release Rest",
+      "program": "${workspaceFolder:swift-compute-test}/.build/release/Rest",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-compute-test}",
+      "preLaunchTask": "swift: Build Release Rest"
     }
   ]
 }
