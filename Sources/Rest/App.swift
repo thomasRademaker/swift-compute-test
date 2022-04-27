@@ -4,19 +4,19 @@ import Foundation
 @main
 struct App {
     static func main() async throws {
-        NFLPlayersRoutes.register(router)
+        StoryRoutes.register(router)
         try await onIncomingRequest(router.run)
     }
 
     static let router = Router()
 }
 
-struct NFLPlayersRoutes {
+struct StoryRoutes {
     static func register(_ router: Router) {
-        router.get("/players")
+        router.get("/stories", getStories)
     }
 
-    static func getPlayers(req: IncomingRequest, res: OutgoingResponse) async throws {
-        try await res.status(.ok).send("players")
+    static func getStories(req: IncomingRequest, res: OutgoingResponse) async throws {
+        try await res.status(.ok).send("stories")
     }
 }
