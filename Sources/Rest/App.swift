@@ -4,6 +4,7 @@ import Foundation
 @main
 struct App {
     static func main() async throws {
+        WowRoute.extendRouter()
         try await onIncomingRequest(router.run)
     }
 
@@ -22,4 +23,13 @@ struct App {
                 try await res.status(.badRequest).send("Missing required param: message")
             }
         }
+}
+
+struct WowRoute {
+    static func extendRouter() {
+        App.router
+            .get("/wow") { req, res in 
+                try await res.status(.ok).send("WOW")
+            }
+    }
 }
