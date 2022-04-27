@@ -4,8 +4,9 @@ import Foundation
 @main
 struct App {
     static func main() async throws {
-        WowRoute.extendRouter()
+        // WowRoute.extendRouter()
         try await onIncomingRequest(router.run)
+        try await onIncomingRequest(WowRoute.router.run)
     }
 
     static let router = Router()
@@ -32,4 +33,9 @@ struct WowRoute {
                 try await res.status(.ok).send("WOW")
             }
     }
+
+    static let router = Router()
+        .get("/wow") { req, res in 
+            try await res.status(.ok).send("WOW")
+        }
 }
