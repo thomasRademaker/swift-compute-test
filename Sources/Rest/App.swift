@@ -26,7 +26,7 @@ struct StoryRoutes {
         }
         let fetchRequest = FetchRequest(url)
         let fetchResponse = try await fetch(fetchRequest)
-        res.status(fetchResponse.status).send(fetchResponse.body)
+        res.status(fetchResponse.ok).send(fetchResponse.body)
         // try await res.status(.ok).send("stories")
     }
 }
