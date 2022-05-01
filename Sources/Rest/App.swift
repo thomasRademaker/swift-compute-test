@@ -26,7 +26,34 @@ struct StoryRoutes {
         }
         let fetchRequest = FetchRequest(url)
         let fetchResponse = try await fetch(fetchRequest)
-        try await res.status(fetchResponse.status).send(fetchResponse.body.jsonObject())
+        let stories = fetchResponse.decode([Story].self)
+        try await res.status(fetchResponse.status).send(stories)
+        // try await res.status(fetchResponse.status).send(fetchResponse.body.jsonObject())
         // try await res.status(.ok).send("stories")
     }
+}
+
+struct Story: Decodable {
+
+    struct Author: Decodable {
+        let id: Int
+        let name: String
+        let avatar: String
+    }
+
+    struct Thumbnail: Decodable {
+        let raw: String
+        let desktop: String
+    }
+
+    let id: Int
+    let title: String
+    let type: String
+    let commentCount: Int
+    let tags: [String]
+    let date: Date
+    let updatedAt: Date
+    let slug: String
+    let author: Author
+    let thumbnail: Thumbnail
 }
