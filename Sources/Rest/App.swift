@@ -30,7 +30,7 @@ struct StoryRoutes {
         // try await res.status(fetchResponse.status).send(fetchResponse.body.jsonArray())
         // try await res.status(fetchResponse.status).send(fetchResponse.body.jsonObject())
         // try await res.status(.ok).send("stories")
-        try await res.status(fetchResponse.status).send(fetchResponse.json())
+        try await res.status(fetchResponse.status).send(fetchResponse.jsonArray())
     }
 }
 
