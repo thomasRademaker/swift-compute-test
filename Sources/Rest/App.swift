@@ -27,9 +27,10 @@ struct StoryRoutes {
         let fetchRequest = FetchRequest(url)
         let fetchResponse = try await fetch(fetchRequest)
         // let stories = try await fetchResponse.decode([Story].self)
-        try await res.status(fetchResponse.status).send(fetchResponse.body.jsonArray())
+        // try await res.status(fetchResponse.status).send(fetchResponse.body.jsonArray())
         // try await res.status(fetchResponse.status).send(fetchResponse.body.jsonObject())
         // try await res.status(.ok).send("stories")
+        try await res.status(fetchResponse.status).send(fetchResponse.body.json())
     }
 }
 
