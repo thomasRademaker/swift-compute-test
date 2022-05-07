@@ -18,6 +18,11 @@ struct StoryRoutes {
 
     static func register(_ router: Router) {
         router.get("/stories", getStories)
+        router.get("hello", hello)
+    }
+
+    static func hello(req: IncomingRequest, res: OutgoingResponse) async throws {
+        try await res.status(.ok).send("HELLO")
     }
 
     static func getStories(req: IncomingRequest, res: OutgoingResponse) async throws {
