@@ -18,7 +18,7 @@ struct StoryRoutes {
 
     static func register(_ router: Router) {
         router.get("/stories", getStories)
-        router.get("hello", hello)
+        router.get("/hello", hello)
     }
 
     static func hello(req: IncomingRequest, res: OutgoingResponse) async throws {
